@@ -1,0 +1,33 @@
+{
+  "name": "easy-dep-graph",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/danisss9/easy-dep-graph#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danisss9/easy-dep-graph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danisss9/easy-dep-graph/issues"
+  },
+  "bin": {
+    "easy-dep-graph": "bin/index.js"
+  },
+  "type": "module",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "release": "npm run compile:lib && npm run publish:lib && npm run clean:lib",
+    "compile:lib": "tsc --project ./src/tsconfig.json",
+    "publish:lib": "npm publish --access public",
+    "clean:lib": "del *.d.ts && del *.js"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/shelljs": "^0.8.15",
+    "typescript": "^5.0.4"
+  }
+}
